@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <link href="./include/css/index.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Leb Drive</title>
+        <link rel="icon" href="./images/logo.png">
+
+    </head>
+
+    <body>
+        <!-- Below is the navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;" id="navbar">
+            <a class="navbar-brand" href="./index.html">
+              <img id="nav_logo" class="navbar-brand" src="./images/logo.png" alt="Leb Drive" href="./index.html" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="take_exam_nav" href="#">Take Exam</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sign_in_nav" data-toggle="modal" data-target="#signIn_form">Sign in/up</a>
+                  </li>
+              </ul>
+            </div>
+            <p id="user_name">Welcome <span id="name_of_user"></span> <a id="view_profile" href="#" data-toggle="modal" data-target="#profile_form">View profile</a> <a id="sign_out" href="#">Sign Out</a> </p>
+          </nav>
+
+
+        <!-- Below is the jumbotron (Main welcome page header) -->
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to</h1>
+            <img class="navbar-brand" id="mainlogo" src="./images/logo.png" alt="Leb Drive" href="./index.html" />
+            <p class="lead" style="margin-top: 20px;">You got your driving test soon and looking for a place to study ?<br> We got you covered. This website will grant you a passing grade on your exam. You just need to practice!</p>
+            <hr class="my-4">
+            <p>Forget about the manual, just start your practice here and ace the exam. Good Luck!</p>
+            <img src="./images/key-logo.png"  alt="key image" style="height: 9%;"/>
+            <br>
+            <a class="btn btn-primary btn-lg" id="jumbotron_full_test" data-url="./full-test.html" href="#" role="button">Start Full Test</a>
+          </div>
+
+        <!-- Below is the container-->
+          <div class="container" id="test_container">
+            <div class="row">
+              <div class="col-md-4">
+                <h2><i class="fa fa-lightbulb-o" style="font-size:48px;color:red"></i> Question Only Test</h2>
+                <p>This is a question-only test, it consists of 30 questions. You will not be asked on signs. You will have exactly 15 minutes to submit. Once you are done, you will be able to check the correct answers. You must score above 24 (i.e 25/30) in order to pass the exam. </p><br><br>
+                <p><a class="btn btn-secondary" id="questions_test" data-url="./test.html" href="#" role="button" style="background-color: red; font-weight: bold; display: flex; justify-content: center; align-items: center;">Start Questions Test</a></p>
+              </div>
+              <div class="col-md-4">
+                <h2><svg width="1.0625em" height="1em" viewBox="0 0 17 16" class="bi bi-exclamation-triangle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: orange; font-size: 48px;">
+                    <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+                  </svg> Signs Only Test </h2>
+                <p>This is a signs-only test. You will only be asked on the significance of 30 random signs. You will have exactly 15 minutes to submit. Once you are done, you will be able to check the correct answers. You must score above 24 (i.e 25/30) in order to pass the exam.</p><br><br>
+                <p><a class="btn btn-secondary" id="signs_only" data-url="./signs-only.html" href="#" role="button" style="background-color: orange; font-weight: bold; display: flex; justify-content: center; align-items: center; " >Start Signs Test</a></p>
+              </div>
+              <div class="col-md-4">
+                <h2> <i class="fa fa-book" style="color:lightgreen; font-size: 48px;"></i> Full Test</h2>
+                <p>Once you are ready, you can start with the full test. This is the official exam. It consists of 20 random law questions as well as 10 random signs questions. You have exactly 15 minutes to submit. You must score above 24 (i.e 25/30) in order to pass. Good luck! 
+                  <br>Note: you will not be able to check the correct answers once you submit.
+                </p>
+                <p><a class="btn btn-secondary" id="full_test" data-url="./full-test.html" href="#" role="button" style="background-color: lightgreen; font-weight: bold; display: flex; justify-content: center; align-items: center;" >Start Full Test</a></p>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <!-- Below is the caroussel -->
+          <div class="container" id="containerwithcarousel">
+            <div class="row">
+              <div class="col-md-8">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel" data-slide-to="1"></li>
+                      <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./images/Jounieh.jpg" class="d-block w-100" alt="Jounieh Driving School">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Jounieh Driving School</h5>
+                          <p>This is where you will take your practical driving test if you live near Jounieh</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/roadsigns1.jpg" class="d-block w-100" alt="Jounieh Driving School">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./images/jounieh2.jpg" class="d-block w-100" alt="Jounieh Driving School">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Jounieh Driving School</h5>
+                          <p>This is where you will take your practical driving test if you live near Jounieh</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                <h3>Things To Keep In Mind</h3>
+                <p>Here are some things to keep in mind before taking your exam:</p>
+                <ul>
+                    <li>Do no overthink the questions.</li>
+                    <li>Read the questions one night before the exam.</li>
+                    <li>On the day of the exam, make sure you have a good breakfast; a Zaatar sandwich for example. <b>It will improve your concentration during the exam</b></li>
+                    <li>The exam is not hard, but <b>you need to know every question since some of them are not trivial</b>, especially questions related to the law.</li>
+                    <li>Practice as much as you can. It is the only way you can pass the exam</li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <!--Below is the container for the last image on the web-->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                  <img id="quote_div" src="./images/quote.png" alt="Quote"/>
+              </div>
+            </div>
+          </div>
+
+      
+      <!-- Below is the sign in/up PopUp -->
+      <div class="modal fade" id="signIn_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fluid" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title w-100" id="sign_in_title">Sign in</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+            <form class="form-signin" id="form_signin">
+              <img id="logo" class="mb-4" src="./images/logo.png" alt="Leb Drive" width="220" height="70">
+              <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+              <label for="input_sign_in_username" class="sr-only">Username</label>
+              <input type="text" id="input_sign_in_username" class="form-control" placeholder="Username" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <button class="btn btn-lg btn-primary btn-block" id="btn_form_submit_sign_in" type="button">Sign in</button>
+              <p>Don't have an account ? <a href="#" id="a_sign_up">Sign Up</a> </p>
+              <p class="mt-5 mb-3 text-muted">&copy; Leb Drive 2020</p>
+            </form>
+
+            <form class="form-signin" id="form_signup">
+              <img id="logo" class="mb-4" src="./images/logo.png" alt="Leb Drive" width="220" height="70">
+              <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+              <label for="input_sign_up_username" class="sr-only">Username</label>
+              <input type="text" id="input_sign_up_username" class="form-control" placeholder="Username" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="sign_up_inputPassword" class="form-control" placeholder="Password" required>
+              <label for="ccinputPassword" class="sr-only">Confirm Password</label>
+              <input type="password" id="sign_up_ccinputPassword" class="form-control" placeholder="Confirm Password" required>
+              <button class="btn btn-lg btn-primary btn-block" id="btn_form_submit_sign_up" type="button">Sign Up</button>
+              <p>Already have an account? <a href="#" id="a_sign_in">Sign In</a> </p>
+              <p class="mt-5 mb-3 text-muted">&copy; Leb Drive 2020</p>
+            </form>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" id="form_btn_close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
+
+     <!-- Below is the profile PopUp-->
+     <div class="modal fade" id="profile_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fluid" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title w-100" id="profile_name"> </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+            <p>This is your profile. It will give you a summary of what you have accomplished so far and if you are ready for the real test</p>
+            <h3>High Score: <span id="high_score"></span> </h3>
+            <br>
+            <h3>Am I ready for the real test ? <br> <span id="is_ready_for_test"></span> </h3>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" id="form_btn_close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
+    <footer class="bg-light pb-5">
+      <div class="container text-center">
+        <p class="font-italic text-muted mb-0">&copy; Copyrights lebdrive All rights reserved.</p>
+      </div>
+    </footer>
+
+          <script src="./index.js"></script>
+    </body>
+</html>

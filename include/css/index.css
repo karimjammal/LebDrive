@@ -1,0 +1,132 @@
+.jumbotron{
+    background-color: aliceblue;
+    background-size: contain;
+    color: black;
+    font-weight: bold;
+}
+
+.jumbotron p{
+    color: black;
+    font-weight: bold;
+}
+
+body{
+    background-color: #e3f2fd;
+}
+
+#containerwithcarousel a span.carousel-control-next-icon{
+    background-color: red;
+}
+
+#containerwithcarousel a span.carousel-control-prev-icon{
+    background-color: red;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 500px;
+}
+
+.nav-link{
+    cursor: pointer;
+}
+
+/* Form Sign In CSS */
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  #form_signup{
+    display: none;
+  }
+
+  /* Form Sign In CSS */
+
+  /* Form Profile In CSS*/
+  .form-profile {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-profile .checkbox {
+    font-weight: 400;
+  }
+  .form-profile .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-profile .form-control:focus {
+    z-index: 2;
+  }
+  
+ /* Form Profile In CSS*/
+
+/* For the fade out part when pressing on start test*/
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+ }
+
+ #user_name{
+   display: none;
+   right: 0;
+ }
+
+ #nav_logo{
+   width: 150px;
+   height: 50px;
+ }
+
+ #mainlogo{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+ }
+
+#navbar, .jumbotron{
+  background: linear-gradient(to right, #ffffff 0%, #8adcff 100%);
+ }
+
+ #quote_div{
+  background: rgb(52,101,116);
+  background: linear-gradient(50deg, rgba(52,101,116,1) 12%, rgba(15,176,194,1) 59%);
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+ }
+
+ body{
+  background: linear-gradient(to right, #ffffff 0%, #8adcff 100%);
+ }

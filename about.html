@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <link href="./include/css/about.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About</title>
+        <link rel="icon" href="./images/logo.png">
+    </head>
+    <body>
+        
+        <!-- Below is the navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;" id="navbar">
+            <a class="navbar-brand" href="./index.html">
+              <img id="nav_logo" class="navbar-brand" src="./images/logo.png" alt="Leb Drive" href="./index.html" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="take_exam_nav" href="./full-test.html">Take Exam</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sign_in_nav" data-toggle="modal" data-target="#signIn_form">Sign in/up</a>
+                  </li>
+              </ul>
+            </div>
+            <p id="user_name">Welcome <span id="name_of_user"></span> <a id="view_profile" href="#" data-toggle="modal" data-target="#profile_form">View profile</a> <a id="sign_out" href="#">Sign Out</a> </p>
+          </nav>
+          <!-- End of nav bar -->
+          
+          <div class="bg-light">
+            <div class="container py-5">
+              <div class="row h-100 align-items-center py-5">
+                <div class="col-lg-6">
+                  <h1 class="display-4">About This Website</h1>
+                  <p class="lead text-muted mb-0">Here is everything you need to know about this website and its functionalities</p>
+                  <p class="lead text-muted">Meet our <a href="#" id="view_team" class="text-muted"> <u>team</u></a>
+                  </p>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block"><img src="./images/image1.png" alt="" class="img-fluid"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white py-5" id="diversity_container">
+            <div class="container py-5">
+              <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                  <h2 class="font-weight-light">Diversity</h2>
+                  <p class="font-italic text-muted mb-4">This website will allow you to choose between 3 types of exams. Questions only exam, Signs only exam and a Full exam, giving you more options to practice specific parts and questions of the lebanese driving exam</p><a href="./index.html" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+                </div>
+                <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-lg-5 px-5 mx-auto"><img src="./images/review-512.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+                <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+                  <h2 class="font-weight-light">Score Tracking and Feedback</h2>
+                  <p class="font-italic text-muted mb-4">One of the main features of this website is that it allows you to track your high score in the full test section and give you feedback whether or not you're ready for the real driving exam. In order to benefit from this feature, you must sign in.</p><a href="#" id="sign_in_about" data-toggle="modal" data-target="#signIn_form" class="btn btn-light px-5 rounded-pill shadow-sm">Sign In/Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="team" class="bg-light py-5">
+            <div class="container py-5">
+              <div class="row mb-4">
+                <div class="col-lg-5">
+                  <h2 class="display-4 font-weight-light">Our team</h2>
+                  <p class="font-italic text-muted">Here is our team</p>
+                </div>
+              </div>
+          
+              <div class="row text-center">
+          
+                <!-- Team item-->
+                <div class="col-xl-3 col-sm-6 mb-5">
+                  <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Alain Khalife</h5><span class="small text-uppercase text-muted">Front/Back-end - database management</span>
+                    <ul class="social mb-0 list-inline mt-3">
+                      <li class="list-inline-item"><a href="https://www.facebook.com/khalife.alain" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.instagram.com/alain_khalife/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/alain-khalife-97159a1a5" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End-->
+          
+                <!-- Team item-->
+                <div class="col-xl-3 col-sm-6 mb-5">
+                  <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Karim El Jammal</h5><span class="small text-uppercase text-muted">Front-End - Database data collection</span>
+                    <ul class="social mb-0 list-inline mt-3">
+                      <li class="list-inline-item"><a href="https://twitter.com/karimjammal20" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.instagram.com/karim.jammal/?igshid=9xrjt9g9mt3v" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/karim-el-jammal-5961401a7" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End-->
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Below is the sign in/up PopUp-->
+      <div class="modal fade" id="signIn_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fluid" role="document">
+          <!--Content-->
+          <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+              <h4 class="modal-title w-100" id="sign_in_title">Sign in</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+              <form class="form-signin" id="form_signin">
+                <img id="logo" class="mb-4" src="./images/logo.png" alt="Leb Drive" width="220" height="70">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <label for="input_sign_in_username" class="sr-only">Username</label>
+                <input type="text" id="input_sign_in_username" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <button class="btn btn-lg btn-primary btn-block" id="btn_form_submit_sign_in" type="button">Sign in</button>
+                <p>Don't have an account ? <a href="#" id="a_sign_up">Sign Up</a> </p>
+                <p class="mt-5 mb-3 text-muted">&copy; Leb Drive 2020</p>
+              </form>
+  
+              <form class="form-signin" id="form_signup">
+                <img id="logo" class="mb-4" src="./images/logo.png" alt="Leb Drive" width="220" height="70">
+                <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+                <label for="input_sign_up_username" class="sr-only">Username</label>
+                <input type="text" id="input_sign_up_username" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="sign_up_inputPassword" class="form-control" placeholder="Password" required>
+                <label for="ccinputPassword" class="sr-only">Confirm Password</label>
+                <input type="password" id="sign_up_ccinputPassword" class="form-control" placeholder="Confirm Password" required>
+                <button class="btn btn-lg btn-primary btn-block" id="btn_form_submit_sign_up" type="button">Sign Up</button>
+                <p>Already have an account? <a href="#" id="a_sign_in">Sign In</a> </p>
+                <p class="mt-5 mb-3 text-muted">&copy; Leb Drive 2020</p>
+              </form>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="button" id="form_btn_close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+      </div>
+  
+  
+       <!-- Below is the profile PopUp-->
+       <div class="modal fade" id="profile_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fluid" role="document">
+          <!--Content-->
+          <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+              <h4 class="modal-title w-100" id="profile_name"> </h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+              <p>This is your profile. It will give you a summary of what you have accomplished so far and if you are ready for the real test</p>
+              <h3>High Score: <span id="high_score"></span> </h3>
+              <br>
+              <h3>Am I ready for the real test ? <br> <span id="is_ready_for_test"></span> </h3>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="button" id="form_btn_close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+      </div>
+          
+          
+          <footer class="bg-light pb-5">
+            <div class="container text-center">
+              <p class="font-italic text-muted mb-0">&copy; Copyrights lebdrive All rights reserved.</p>
+            </div>
+          </footer>
+
+          <script src="./about.js"></script>
+    </body>
+</html>
